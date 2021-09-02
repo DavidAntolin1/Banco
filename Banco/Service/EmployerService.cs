@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Banco.Service
 {
-    class EmployerService
+    public class EmployerService
     {
-        public static void CalcPrestamo();
+        public static void CalcLoan();
     }
 }
