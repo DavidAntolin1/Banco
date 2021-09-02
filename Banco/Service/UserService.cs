@@ -8,7 +8,14 @@ namespace Banco.Service
 {
     public class UserService
     {
-        List<Client> listaClientes = new List<Client>();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <param name="phone"></param>
+        /// <param name="permission"></param>
         public void ClientRegister(string name, string email,string password, string phone, bool permission)
         {
             ReplyService replyService = new ReplyService();

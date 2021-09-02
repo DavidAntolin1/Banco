@@ -8,6 +8,12 @@ namespace Banco.Service
 {
     public class ReplyService
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="reason"></param>
+        /// <param name="body"></param>
         public void EmailSend(string email, string reason, string body)
         {
             Reply reply = new Reply();

@@ -7,6 +7,9 @@ namespace Banco.Models
 {
     class Reply : ISendable
     {
+        /// <summary>
+        /// Clase que define el contenido que tendrán la respuesta Email y SMS.
+        /// </summary>
         public string Reason { get; set; }
         public string body { get; set; }
 

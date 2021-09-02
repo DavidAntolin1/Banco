@@ -6,6 +6,10 @@ namespace Banco
 {
     class Program
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             UserService userService = new UserService();
