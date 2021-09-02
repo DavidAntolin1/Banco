@@ -11,9 +11,6 @@ namespace Banco.Service
         {
             return email.Contains("@");
         }
-        public void SendEmail(string email,string id, string pass)
-        {
-            Console.WriteLine($"Email para : {0} \n ID: {1} \n Password: {2}", email, id, pass);
-        }
+       
     }
 }

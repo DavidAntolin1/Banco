@@ -4,17 +4,15 @@ using System.Text;
 
 namespace Banco.Models
 {
-    class Employee
+    class Employee : User
     {
         public string Name { get; set; }
-        public string Email { get; set; }
-        public string ID { get; set; }
-        public string Password { get; set; }
-        public int Phone { get; set; }
-        public int AccNumber { get; set; }
-        public int Quantity { get; set; }
-
-        public bool Authentification { get; set; }
-
+        public string Phone { get; set; }
+        public Employee(string name, string email, string password, string phone) : base(email, password)
+        {
+            Name = name;
+            Phone = phone;
+        }
+        
     }
 }

@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Banco.Interface
+namespace Banco.Models
 {
-    class BankAcc
+    class Account
     {
-        public int AccNumber { get; set; }
+        public string UserId { get; set; }
         public decimal Quantity { get; set; }
-
-        public void BankAcc(int accNumber, decimal quantity)
+        public Account(string userId, decimal quantity)
         {
-            AccNumber = accNumber;
+            UserId = userId;
             Quantity = quantity;
+
         }
     }
 }
