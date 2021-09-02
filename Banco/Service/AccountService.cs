@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Banco.Service
 {
-    class AccountService
+    public class AccountService
     {
         public void A
     }

@@ -12,7 +12,7 @@ namespace Banco.Models
         public string Password { get; set; }
         public int Phone { get; set; }
         public int AccNumber { get; set; }
-        public int Quantity { get; set; }
+        public decimal Quantity { get; set; }
 
         public bool Authentification { get; set; }
 
