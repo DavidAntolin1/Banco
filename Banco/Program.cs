@@ -12,6 +12,8 @@ namespace Banco
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            Console.WriteLine("Selecciona el tipo de operación que desea realizar: \n 1-Registrar Usuarios  2-Transacción   3-Pedir Prestamo");
+            //Console.ReadLine();          
             UserService userService = new UserService();
             userService.ClientRegister("Primero", "primero@email.com", "passw1", "987654", false);
             userService.ClientRegister("Primero", "primero@email.com", "passw2", "123456", false);
