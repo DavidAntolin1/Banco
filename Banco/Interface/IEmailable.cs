@@ -4,12 +4,11 @@ using System.Text;
 
 namespace Banco.Interface
 {
-    interface ISendable
+    interface IEmailable
     {
         /// <summary>
         /// Interfaz para que pueda devolver una respuesta.
         /// </summary>
-        string SmsReply(string phone, string body);
         string EmailReply(string email, string body);
 
     }

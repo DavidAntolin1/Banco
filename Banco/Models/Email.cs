@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Banco.Models
 {
-    class Reply : ISendable
+    class Email : IEmailable
     {
         /// <summary>
         /// Clase que define el contenido que tendrán la respuesta Email y SMS.
@@ -15,11 +15,8 @@ namespace Banco.Models
 
         public string EmailReply(string reason, string body)
         {
-            return reason+"\n"+body;
+            return $"{reason} / {body}";
         }
-        public string SmsReply(string phone, string body)
-        {
-            return phone + "\n" + body;
-        }
+        
     }
 }

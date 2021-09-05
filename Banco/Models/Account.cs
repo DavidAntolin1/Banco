@@ -1,23 +1,23 @@
-﻿using System;
+﻿using Banco.Interface;
+using Banco.Service;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Banco.Models
 {
-    class Account
+    public class Account
     {
         /// <summary>
-        /// Modelo para definir la Cuenta Bancaria, definidos por dos valores, ID que será el email y una cantidad que será
-        /// el fondo disponible.
+        /// 
         /// </summary>
-        public string UserId { get; set; }
+        public string Name { get; set; }
         public decimal Quantity { get; set; }
-        public Account(string userId, decimal quantity)
+        public Account(string name, decimal quantity)
         {
-            UserId = userId;
-            Quantity = quantity;
+            this.Name = name;
+            this.Quantity = quantity;
 
         }
-        
     }
 }

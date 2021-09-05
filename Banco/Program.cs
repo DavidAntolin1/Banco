@@ -6,23 +6,26 @@ namespace Banco
 {
     class Program
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="args"></param>
+        
         static void Main(string[] args)
-        {
-            Console.WriteLine("Selecciona el tipo de operación que desea realizar: \n 1-Registrar Usuarios  2-Transacción   3-Pedir Prestamo");
-            //Console.ReadLine();          
-            UserService userService = new UserService();
-            userService.ClientRegister("Primero", "primero@email.com", "passw1", "987654", false);
-            userService.ClientRegister("Primero", "primero@email.com", "passw2", "123456", false);
+        {        
+            //TODO: 
+            var registerService = new RegisterService();
+            var smsService = new SmsService();
+            var rateInterestService = new RateInterestService();
+
+            var usuario1 = (Client)registerService.UserRegister("Primero", "primero@email.com", "passw1", "987654", RegisterService.Permission.MINIMA);
+            var usuario2 = (Client)registerService.UserRegister("Primero", "primero@email.com", "passw2", "123456", RegisterService.Permission.MINIMA);
+            var usuario3 = (Employee)registerService.UserRegister("Tercero", "tercero@email.com", "passw3", "55555", RegisterService.Permission.TOTAL);
+
+
             Account account1 = new Account("primero@email.com", 500.3m);
             Account account2 = new Account("segundo@email.com", 725.5m);
-            Client usuario1 = new Client("Primero", "primero@email.com", "passw", "987654");
-            Client usuario2 = new Client("Segundo", "segundo@email.com", "passw", "987654");
+
             AccountService accountService = new AccountService();
-            accountService.SendQuantity(account1, account2, usuario1.Phone, usuario2.Phone, 250.0m);
+            accountService.SendQuantity(account1, account2, usuario1.Phone, usuario2.Phone, 250.2m, smsService);
+
+            rateInterestService.CalcRate(usuario1, account1, 4000, usuario3);
 
         }
 
